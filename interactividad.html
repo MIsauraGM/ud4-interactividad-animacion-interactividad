@@ -48,19 +48,11 @@
   </details>
 
   <!-- dialog -->
-  <dialog id="ms">
-    <p>¡Hola, soy un mensaje!</p>
-    <button id="close" onclick="document.getElementById('ms').close()">Ok!</button>
-  </dialog>
-  <button id="show" onclick="document.getElementById('ms').show()">Mostrar</button>
-
-  <!-- dialog modal -->
-  <dialog id="ms">
-    <h2>¡Vuelve a la sombra!</h2>
-    <img src="gandalf.jpg" alt="Gandalf" />
-    <p>¡NO.. PUEDES... PASAR!</p>
-    <button id="close" onclick="document.getElementById('ms').close()">Ok!</button>
-  </dialog>
-  <button id="show" onclick="document.getElementById('ms').showModal()">Mostrar</button>
+  <button id="show" onclick="document.getElementById('dialogo-1').show()">Mostrar</button>
+  <button id="show-modal" onclick="document.getElementById('dialogo-1').showModal()">Modal</button>
+  <dialog id="dialogo-1">
+    <p>Hola! Este es nuestro primer diálogo. Si te gusta, no lo cierres...</p>
+    <button id="close" onclick="document.getElementById('dialogo-1').close()">Ok!</button>
+  </dialog>  
 </body>
 </html>
