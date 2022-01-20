@@ -6,14 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIALOG</title>
   <style>
-    dialog {
-      border: none;
-      background-color: gainsboro;
-      color: goldenrod;
-      font-weight: bold;
-      font-size: 1.5em;
-    }
-
     button {
       padding: 5px 10px;
       text-transform: uppercase;
@@ -22,17 +14,26 @@
       color: white;
     }
 
+    dialog {
+      border: none;
+      background-color: gainsboro;
+      color: goldenrod;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
     dialog[open] {
       position: fixed;
       width: 50%;
       max-width: 750px;
-      top: 10px;
+      top: 100px; /* No aplica al modal. */
     }
 
     /* Fondo del diálogo modal. */
     dialog::backdrop {
       background: linear-gradient(90deg, gray, gold);
       mix-blend-mode: darken;
+      backdrop-filter: blur;
     }
   </style>
 </head>
