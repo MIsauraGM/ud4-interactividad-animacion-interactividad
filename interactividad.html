@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elementos interactivos</title>
+  <style>
+    /* DETAILS */
+    details {
+      padding: 15px;
+      background-color: #f6f7f8;
+      margin-bottom: 20px;
+    }
+
+    details[open] {
+      background-color: gold;
+    }
+    summary {
+      cursor: pointer;
+    }
+
+    summary::marker {
+      color: green;
+      font-size: 1.5em;
+    }
+   
+    /* Reemplazar la flecha */
+    summary::marker {
+      display: none;
+      content: "";
+    }
+    summary:before {
+      content: "\2714"; /* El nuevo icono */
+      color: #696f7c;
+      margin-right: 5px;
+    }
+
+    /* DIALOG */
+  </style>
+</head>
+<body>
+  <!-- details -->
+  <details>
+    <summary>Más información</summary>
+    <h2>Nombre del sujeto</h2>
+    <img src="img/gatito.png" alt="Foto del sujeto">
+  </details>
+
+  <!-- dialog -->
+  <dialog id="ms">
+    <p>¡Hola, soy un mensaje!</p>
+    <button id="close" onclick="document.getElementById('ms').close()">Ok!</button>
+  </dialog>
+  <button id="show" onclick="document.getElementById('ms').show()">Mostrar</button>
+
+  <!-- dialog modal -->
+  <dialog id="ms">
+    <h2>¡Vuelve a la sombra!</h2>
+    <img src="gandalf.jpg" alt="Gandalf" />
+    <p>¡NO.. PUEDES... PASAR!</p>
+    <button id="close" onclick="document.getElementById('ms').close()">Ok!</button>
+  </dialog>
+  <button id="show" onclick="document.getElementById('ms').showModal()">Mostrar</button>
+</body>
+</html>

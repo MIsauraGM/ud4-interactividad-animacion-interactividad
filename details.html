@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DETAILS</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+ 
+    body {  
+      background: #f6f8fa;
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .faq-container {    
+      max-width: 800px;
+      margin: 50px auto 0 auto;
+      padding: 2rem;
+    }
+
+    .faq-container h2 {
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      font-weight: 600;
+      text-align: center;
+      color: #364f6b;
+    }
+
+    details { 
+      background-color: #f6f8fa;
+      width: 100%;
+      margin-bottom: 1rem;   
+      border-radius: 8px;  
+      border: 1px solid #d8e0e9;
+      color: #364f6b;
+      position: relative;  
+    }
+
+    details summary {  
+      font-weight: 400;
+      font-size: 1.25rem;
+      padding: 1rem;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    details p {
+      padding: 1rem;
+      margin: 0 1rem 1rem 1rem;
+      background: #f6f8fa;
+      border-left: 2px solid #364f6b;
+    }
+    
+    details:hover,
+    details[open] {
+      box-shadow: 5px 5px 15px #d9d9d9;
+    }
+    
+    details[open] {
+      background: #ffffff;
+    }
+    
+    details[open] summary {
+      font-weight: 600;
+    }
+    
+    details summary::before {
+      position: absolute;
+      content: "👇";    
+      font-size: 1.75rem;
+      top: 10px;
+      right: 16px;  
+    }
+    
+    details[open] summary::before {
+      animation: rotate-emoji 0.6s ease-in-out both;
+    }
+    
+    @keyframes rotate-emoji {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(180deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="faq-container">
+    <h2>FAQ</h2>
+    <details open>
+    <summary>Pregunta número 1</summary>
+    <p>Esta respuesta aparece primero abierta.</p>
+  </details>
+
+  <details>
+    <summary>Pregunta número 2</summary>
+    <p>Esta respuesta aparece cerrada hasta que hagas clic.</p>
+  </details>
+    
+  <details>
+    <summary>Pregunta número 3</summary>
+    <p>Esta respuesta aparece cerrada hasta que hagas clic.</p>
+  </details>
+    
+  <details>
+    <summary>Pregunta número 4</summary>
+    <p>Esta respuesta aparece cerrada hasta que hagas clic.</p>
+  </details>
+    
+  <details>
+    <summary>Pregunta número 5</summary>
+    <p>Esta respuesta aparece cerrada hasta que hagas clic.</p>
+  </details>
+</div>
+</body>
+</html>
